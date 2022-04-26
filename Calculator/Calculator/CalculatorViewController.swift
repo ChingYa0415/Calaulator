@@ -20,6 +20,11 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGray2
         addChildren()
+        
+        calculateString = "0"
+        numberOperator = ""
+        firstNumber = 0.0
+        
         boardVC.label.text = calculateString
     }
     
@@ -107,16 +112,32 @@ extension CalculatorViewController: KeyboardViewControllerDelegate {
             switch numberOperator {
             case "div":
                 firstNumber /= Double(calculateString)!
-                boardVC.label.text = String(firstNumber)
+                if String(firstNumber).contains(".") && String(firstNumber).last == "0" {
+                    boardVC.label.text = String(Int(firstNumber))
+                } else {
+                    boardVC.label.text = String(firstNumber)
+                }
             case "mul":
                 firstNumber *= Double(calculateString)!
-                boardVC.label.text = String(firstNumber)
+                if String(firstNumber).contains(".") && String(firstNumber).last == "0" {
+                    boardVC.label.text = String(Int(firstNumber))
+                } else {
+                    boardVC.label.text = String(firstNumber)
+                }
             case "min":
                 firstNumber -= Double(calculateString)!
-                boardVC.label.text = String(firstNumber)
+                if String(firstNumber).contains(".") && String(firstNumber).last == "0" {
+                    boardVC.label.text = String(Int(firstNumber))
+                } else {
+                    boardVC.label.text = String(firstNumber)
+                }
             case "add":
                 firstNumber += Double(calculateString)!
-                boardVC.label.text = String(firstNumber)
+                if String(firstNumber).contains(".") && String(firstNumber).last == "0" {
+                    boardVC.label.text = String(Int(firstNumber))
+                } else {
+                    boardVC.label.text = String(firstNumber)
+                }
             default:
                 if firstNumber == 0.0 {
                     boardVC.label.text = calculateString
@@ -134,8 +155,8 @@ extension CalculatorViewController: KeyboardViewControllerDelegate {
                 calculateString.append(String(letter))
                 boardVC.label.text = calculateString
             }
-        }
-        
     }
     
+}
+
 }

@@ -3,10 +3,19 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Black.ttf">
+            <string>Nunito-Black</string>
+        </array>
+        <array key="Nunito-ExtraBoldItalic.ttf">
+            <string>Nunito-ExtraBoldItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -16,31 +25,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-uB-TlH">
-                                <rect key="frame" x="60" y="280" width="294" height="41"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-uB-TlH">
+                                <rect key="frame" x="30" y="378" width="354" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtb-im-S7b">
-                                        <rect key="frame" x="0.0" y="0.0" width="103" height="41"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtb-im-S7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="34"/>
+                                        <color key="textColor" name="Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtP-AC-qOo">
-                                        <rect key="frame" x="103" y="0.0" width="191" height="41"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtP-AC-qOo">
+                                        <rect key="frame" x="110" y="0.0" width="244" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp1-Cd-UzX">
-                                <rect key="frame" x="147" y="428" width="120" height="40"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="CCu-Rw-bme"/>
-                                    <constraint firstAttribute="height" constant="40" id="J2m-4H-0li"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="GO!"/>
+                                <rect key="frame" x="132" y="425.5" width="150" height="43"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="26"/>
+                                <state key="normal" title="GO!">
+                                    <color key="titleColor" name="Color"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="15"/>
@@ -50,18 +57,41 @@
                                     <segue destination="31u-w4-ELk" kind="show" id="wVB-wn-XDs"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer-logo" translatesAutoresizingMaskIntoConstraints="NO" id="H9j-yv-cBk">
+                                <rect key="frame" x="82" y="138" width="250" height="112"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qre-RJ-Lxq">
+                                <rect key="frame" x="64" y="286" width="286" height="62"/>
+                                <fontDescription key="fontDescription" name="Nunito-ExtraBoldItalic" family="Nunito" pointSize="53"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mp1-Cd-UzX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A0k-ev-DYd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wlP-uB-TlH" secondAttribute="trailing" constant="60" id="As5-Ji-fel"/>
-                            <constraint firstItem="wlP-uB-TlH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="QQo-dA-gxn"/>
-                            <constraint firstItem="wlP-uB-TlH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="192" id="gy7-Vh-HK8"/>
-                            <constraint firstItem="Mp1-Cd-UzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzL-eR-PXT"/>
+                            <constraint firstItem="Qre-RJ-Lxq" firstAttribute="top" secondItem="H9j-yv-cBk" secondAttribute="bottom" constant="36" id="1jL-x4-h8K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mp1-Cd-UzX" secondAttribute="trailing" constant="132" id="6l2-Gd-TtR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qre-RJ-Lxq" secondAttribute="trailing" constant="64" id="8Dt-At-kvg"/>
+                            <constraint firstItem="Mp1-Cd-UzX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="J0J-QT-bO4"/>
+                            <constraint firstItem="wlP-uB-TlH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="L4O-I3-Xkr"/>
+                            <constraint firstItem="wlP-uB-TlH" firstAttribute="top" secondItem="Qre-RJ-Lxq" secondAttribute="bottom" constant="30" id="NvH-i4-Lnc"/>
+                            <constraint firstItem="H9j-yv-cBk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="cff-Cg-jTB"/>
+                            <constraint firstItem="H9j-yv-cBk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="jK0-LE-wXX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9j-yv-cBk" secondAttribute="trailing" constant="82" id="oSd-gl-Bwx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wlP-uB-TlH" secondAttribute="trailing" constant="30" id="pRn-br-mYe"/>
+                            <constraint firstItem="Qre-RJ-Lxq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="sOT-l4-oif"/>
+                            <constraint firstItem="Mp1-Cd-UzX" firstAttribute="top" secondItem="wlP-uB-TlH" secondAttribute="bottom" constant="7.5" id="t2p-tS-HHO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kaa-62-fRL"/>
+                    <connections>
+                        <outlet property="goButton" destination="Mp1-Cd-UzX" id="Xxh-bm-3jS"/>
+                        <outlet property="logoImageView" destination="H9j-yv-cBk" id="VqX-Jd-Up8"/>
+                        <outlet property="nameLabel" destination="qtb-im-S7b" id="e6y-Sg-geQ"/>
+                        <outlet property="nameTextField" destination="UtP-AC-qOo" id="i5e-Ye-kAs"/>
+                        <outlet property="titleLabel" destination="Qre-RJ-Lxq" id="O7C-Fd-5yG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,11 +133,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="footer-logo" width="314" height="112"/>
+        <namedColor name="Color">
+            <color red="0.85490196078431369" green="0.37647058823529411" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

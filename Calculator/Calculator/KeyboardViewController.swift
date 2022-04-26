@@ -57,17 +57,10 @@ extension KeyboardViewController {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return letters.count
-        // 5
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        switch section {
-//        case 5:
-//            return 3
-//        default:
-//            return 4
-//        }
-        return 4
+        return letters[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

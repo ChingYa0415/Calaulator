@@ -16,6 +16,7 @@ class KeyCollectionViewCell: UICollectionViewCell {
         label.textColor = .black
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 36, weight: .medium)
+        label.numberOfLines = 0
         
         return label
     }()

@@ -28,7 +28,7 @@ class BoardViewController: UIViewController {
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            label.topAnchor.constraint(equalTo: view.topAnchor),
+            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             label.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
